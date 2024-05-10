@@ -1,0 +1,28 @@
+{
+    "New York": {
+      "temperature": "26°C",
+      "humidity": "56%",
+      "windSpeed": "15 km/h"
+    },
+    "New Jersey": {
+        "temperature": "21°C",
+        "humidity": "52%",
+        "windSpeed": "12 km/h"
+      },
+    "Los Angeles": {
+      "temperature": "15°C",
+      "humidity": "45%",
+      "windSpeed": "10 km/h"
+    },
+    "London": {
+      "temperature": "-9°C",
+      "humidity": "70%",
+      "windSpeed": "20 km/h"
+    },
+    "Mumbai":{
+      "temperature": "37°C",
+      "humidity": "70%",
+      "windSpeed": "20 km/h"
+    }
+  }
+  

@@ -1,0 +1,109 @@
+.weather-card {
+    background-color: #ffffff; /* White background */
+    border-radius: 20px; /* Curved border */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1); /* Box shadow effect */
+    padding: 20px; /* Padding for content */
+    margin: 20px; /* Margin around the card */
+    width: 400px; /* Set the width of the card */
+    cursor: pointer; /* Add cursor pointer */
+  position: relative;
+  transition: all 0.3s ease; 
+  }
+  .weather-card.flipped {
+    transform: rotateY(180deg); /* Rotate card when flipped */
+  }
+  
+  
+  .weather-card .city {
+    font-size: 24px; /* Font size for city */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 10px; /* Margin at the bottom */
+  }
+  
+  .weather-card .temperature,
+  .weather-card .humidity,
+  .weather-card .wind-speed {
+    margin-bottom: 5px; /* Margin between weather details */
+  }
+  .weather-card.expanded {
+    width: 600px; /* Expanded width */
+  }
+  
+  .weather-card .weather-icon {
+    margin-bottom: 10px; /* Margin below weather icon */
+  }
+  
+  .weather-card .weather-icon svg {
+    font-size: 48px; /* Size of weather icon */
+  }
+  /* WeatherCard.css */
+
+/* Normal background */
+.weather-card.normal {
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CTq3fxFcIJEvt3jELr5_0E0IdFlvd5H6BA&usqp=CAU");
+}
+
+
+.weather-card.hot {
+ 
+  animation: hotAnimation 10s infinite alternate;
+}
+
+@keyframes hotAnimation {
+  0% {
+    background-color: #ffffff; /* White */
+  }
+  100% {
+    background-color: #ffff99; /* Light yellow */
+  }
+}
+
+.weather-card.cold {
+  background-image: url("https://example.com/cold-background.jpg");
+  animation: coldAnimation 10s infinite alternate;
+}
+
+@keyframes coldAnimation {
+  0% {
+    background-color: #ffffff; /* White */
+  }
+  100% {
+    background-color: #99ccff; /* Light blue */
+  }
+}
+
+.weather-card.extreme-hot {
+  animation: extremeHotAnimation 10s infinite alternate;
+   /* Gradient from red to orange */
+}
+.weather-card .description {
+  font-size: 14px; /* Font size for description */
+  margin-top: 10px; /* Margin at the top */
+  line-height: 1.5; /* Line height for better readability */
+  color: #333; /* Text color */
+}
+
+@keyframes extremeHotAnimation {
+  0% {
+    background-color: white; /* Red */
+  }
+  100% {
+    background-color: #FFA500; /* Orange */
+  }
+}
+.weather-card.snowAnimation{
+  animation: snowAnimation 10s infinite alternate;
+   /* Gradient from red to orange */
+}
+@keyframes snowAnimation {
+  0% {
+    background-color:white; /* Red */
+  }
+  100% {
+    background-color: #93E7FB; /* Orange */
+  }
+  
+}
+
+
+  
