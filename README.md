@@ -30,7 +30,7 @@ When you start typing in the search bar, the application suggests city names bas
 
 ### Step 3: Expanded Card View
 
-![Expanded Card View](screenshot/Expand search.png)
+![Expanded Card View](screenshot/Expandsearch.png)
 
 After selecting a city, the weather card expands to show more details. Here, you can see the weather description and the weather forecast for the next 5 days. This information is fetched from the backend API endpoint `localhost:4000/weather?city={cityName}`.
 
@@ -50,18 +50,23 @@ Clone the repository to your local machine:
 git clone https://github.com/your-username/weather-dashboard.git
 cd weather-dashboard
 
+
 ### Starting Docker Containers:
 
 docker-compose up -d
 
 
-Additional Information:
+### Additional Information:
 The mock weather data is fetched from the endpoint http://localhost:3000/weatherdata.json.
 The Weather data with specific city is fetched by this endpoint http://localhost:4000/weather?city=London
 
 ## Automated Testing with Coverage
 
 The Weather Dashboard app includes comprehensive automated testing to ensure reliability and maintainability. We have implemented unit tests and integration tests for both the frontend and backend components of the application. Additionally, we utilize code coverage tools to measure the effectiveness of our test suite.
+Test Coverage
+After running the tests, you can view the test coverage reports to assess the effectiveness of our test suite. The coverage reports provide insights into which parts of the codebase are covered by tests and identify areas that may require additional testing.
+
+The coverage reports for both frontend and backend are generated in the coverage directory of their respective directories. Open the HTML coverage report in your web browser to view detailed coverage statistics.
 
 ### Frontend Testing
 
@@ -71,4 +76,7 @@ To run frontend tests and generate coverage reports, use the following command:
 
 ```bash
 npm test -- --coverage
+
+Note :⚠️ Please note that the Docker may take some time to build, especially if you're running Docker for the first time or if you have a slow internet connection. Additionally, there is room for further improvement in the application UI and features. If I had more time, I would have enhanced the user interface and could add more features to make the Weather Dashboard app even better.
+
 
