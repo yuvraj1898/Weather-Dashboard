@@ -39,9 +39,6 @@
   /* WeatherCard.css */
 
 /* Normal background */
-.weather-card.normal {
-  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CTq3fxFcIJEvt3jELr5_0E0IdFlvd5H6BA&usqp=CAU");
-}
 
 
 .weather-card.hot {
@@ -79,6 +76,7 @@
 .weather-card .description {
   font-size: 14px; /* Font size for description */
   margin-top: 10px; /* Margin at the top */
+  margin-bottom: 10px;
   line-height: 1.5; /* Line height for better readability */
   color: #333; /* Text color */
 }
@@ -88,7 +86,7 @@
     background-color: white; /* Red */
   }
   100% {
-    background-color: #FFA500; /* Orange */
+    background-color: #ffab40; /* Orange */
   }
 }
 .weather-card.snowAnimation{
@@ -104,6 +102,35 @@
   }
   
 }
+.forecast-container {
+  display: flex;
+  justify-content: space-between; /* Evenly distribute items */
+}
+
+.forecast-item {
+  flex: 1; /* Each item takes equal space */
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.3s ease; /* Add transition for smooth effect */
+}
+
+.forecast-item:hover {
+  transform: translateY(-5px); /* Add a slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.day {
+  font-weight: bold;
+}
+
+.temperature {
+  margin-top: 5px;
+}
+
 
 
   

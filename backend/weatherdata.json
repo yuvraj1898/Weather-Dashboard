@@ -3,6 +3,13 @@
       "temperature": "26°C",
       "humidity": "56%",
       "windSpeed": "15 km/h",
+      "forecast": {
+        "Wed": "28°C",
+          "Thu": "29°C",
+          "Fri": "27°C",
+          "Sat": "26°C",
+          "Sun": "25°C"
+      },
       "description":"According to the Köppen climate classification, the climate of New York City is humid subtropical (Cfa), with parts of the city transitioning into a humid continental climate. (Dfa). The city experiences moderately cold, somewhat wet and snowy winters; and hot, humid summers with plentiful rainfall all year round."
     },
 
@@ -10,24 +17,52 @@
         "temperature": "21°C",
         "humidity": "52%",
         "windSpeed": "12 km/h",
+        "forecast": {
+          "Wed": "28°C",
+          "Thu": "29°C",
+          "Fri": "27°C",
+          "Sat": "26°C",
+          "Sun": "25°C"
+        },
         "description":"Relatively mild conditions prevail in the south, with average winter temperatures above freezing. Summers are relatively hot throughout the state, with averages for July ranging from about 70 °F (21 °C) in the northwest to above 76 °F (24 °C) in the southwest."
       },
     "Los Angeles": {
       "temperature": "15°C",
       "humidity": "45%",
       "windSpeed": "10 km/h",
+      "forecast": {
+        "Wed": "28°C",
+        "Thu": "29°C",
+        "Fri": "27°C",
+        "Sat": "26°C",
+        "Sun": "25°C"
+      },
       "description":"The climate of Los Angeles is mild to hot year-round, and mostly dry. It is classified as borderline Mediterranean and semi-arid. The city is characterized by seasonal changes in rainfall—with a dry summer and a winter rainy season."
     },
     "London": {
       "temperature": "9°C",
       "humidity": "70%",
       "windSpeed": "20 km/h",
+      "forecast": {
+        "Wed": "28°C",
+        "Thu": "29°C",
+        "Fri": "27°C",
+        "Sat": "26°C",
+        "Sun": "25°C"
+      },
       "description":"While London does experience four separate seasons, light showers and cloudy skies are prevalent throughout the year. Daily highs range from 48°F (9°C) in the winter to 73°F (23°C) in the summer, and weather conditions can fluctuate quite a bit over the course of a day."
     },
     "Mumbai": {
       "temperature": "37°C",
       "humidity": "70%",
       "windSpeed": "20 km/h",
+      "forecast": {
+        "Wed": "28°C",
+        "Thu": "29°C",
+        "Fri": "27°C",
+        "Sat": "26°C",
+        "Sun": "25°C"
+      },
       "description":"The climate of Mumbai is warm and humid with monthly temperatures varying from 91 °F (33 °C) in May to 67 °F (19 °C) in January. Cool weather prevails from December to February and hot weather from March to May."
 
     }

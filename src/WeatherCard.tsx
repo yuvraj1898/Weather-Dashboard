@@ -32,6 +32,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
   };
   const [expanded, setExpanded] = useState(false);
   const [description, setDescription] = useState<string | null>(null);
+  const [forecast, setForecast] = useState<any>(null);
 
   const handleCardClick = () => {
     setExpanded(!expanded);
@@ -40,15 +41,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
       fetchDescription(city);
     }
   };
-  // const handleSearchClick = () => {
-  //   if (expanded) {
-  //     // Reset card state if expanded
-  //     setExpanded(false);
-  //     setDescription(null);
-  //   }
-  //   // Call parent function to handle search click
-  //   onSearchClick();
-  // };
+
   const fetchDescription = async (cityName: string) => {
     try {
       const response = await fetch(`http://localhost:4000/weather?city=${cityName}`);
@@ -57,6 +50,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
       }
       const data = await response.json();
       setDescription(data.description);
+      setForecast(data.forecast); 
     } catch (error) {
       console.error('Error fetching city description:', error);
     }
@@ -91,10 +85,22 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
         <div className="temperature">Humidity: {humidity}</div>
         <div className="temperature">Wind Speed: {windSpeed}</div>
         <div className="weather-icon">{renderWeatherIcon(parseInt(temperature))}</div>
+        
       </div>
-      {expanded && description && (
-        <div className="description">{description}</div>
-      )}
+      
+      {expanded && forecast && (
+  <div className="forecast">
+   <div className="description">{description}</div>
+    <div className="forecast-container">
+      {Object.keys(forecast).map((day, index) => (
+        <div key={index} className="forecast-item">
+          <div className="day">{day}</div>
+          <div className="temperature">{forecast[day]}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+)}
     </div>
   );
 };
