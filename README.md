@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# Weather Dashboard App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Weather Dashboard app! This application provides weather data for cities around the world. With a sleek and intuitive user interface, you can easily search for cities and access detailed weather information at your fingertips.
 
-## Available Scripts
+## Introduction
 
-In the project directory, you can run:
+The Weather Dashboard app is built with React.js for the frontend and Node.js for the backend. It leverages a JSON file containing mock weather data for demonstration purposes Further for more detailed information of weather we have configured API using node JS. The frontend communicates with the backend API to fetch weather data based on user input.The frontend application automatically updates results when the user starts typing in the input field "citySearch" with at least 2 letters.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **City Search:** Seamlessly search for cities by typing in the search bar. The application suggests city names based on your input, making it easy to find the desired location.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Detailed Weather Information:** View detailed weather information for the selected city, including current weather conditions and a 5-day weather forecast. The application displays weather descriptions and predictions, helping you plan your activities accordingly.
 
-### `npm test`
+- **Interactive UI:** Experience an interactive user interface that allows you to expand weather cards for more details. Each card provides comprehensive weather data, making it easy to stay informed about the weather conditions.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Preview
 
-### `npm run build`
+### Step 1: Dashboard View
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Dashboard View](screenshots/Home-Dashboard.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This is the main dashboard view of the Weather Dashboard application. Here, you can see the search bar where you can input the city name to fetch weather data.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Step 2: Searching for a City
 
-### `npm run eject`
+![Searching for a City](screenshots/Search.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+When you start typing in the search bar, the application suggests city names based on your input. In this screenshot, the user is searching for "Lon" and the application suggests "London". Once the user selects a city, the weather data for that city is fetched from the JSON file.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Step 3: Expanded Card View
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Expanded Card View](screenshots/Expand search.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+After selecting a city, the weather card expands to show more details. Here, you can see the weather description and the weather forecast for the next 5 days. This information is fetched from the backend API endpoint `localhost:4000/weather?city={cityName}`.
 
-## Learn More
+## Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run the application locally, follow the instructions provided in the previous section.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+...
+
+
+## Getting Started
+
+To run the application locally using Docker Compose, follow these steps:
+
+### Prerequisites
+
+- Docker Desktop: [Download](https://www.docker.com/products/docker-desktop)
+
+### Clone the Repository
+
+Clone the repository to your local machine:
+
+```bash
+git clone https://github.com/your-username/weather-dashboard.git
+cd weather-dashboard
+
+### Starting Docker Containers:
+
+docker-compose up -d
+
+
+Additional Information:
+The mock weather data is fetched from the endpoint http://localhost:4000/weatherdata.json.
+The Weather data with specific city is fetched by this endpoint http://localhost:4000/weather?city=London
+
