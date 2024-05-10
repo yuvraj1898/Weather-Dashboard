@@ -18,28 +18,21 @@ The Weather Dashboard app is built with React.js for the frontend and Node.js fo
 
 ### Step 1: Dashboard View
 
-![Dashboard View](screenshots/Home-Dashboard.png)
+![Dashboard View](screenshot/Home-Dashboard.png)
 
 This is the main dashboard view of the Weather Dashboard application. Here, you can see the search bar where you can input the city name to fetch weather data.
 
 ### Step 2: Searching for a City
 
-![Searching for a City](screenshots/Search.png)
+![Searching for a City](screenshot/Search.png)
 
 When you start typing in the search bar, the application suggests city names based on your input. In this screenshot, the user is searching for "Lon" and the application suggests "London". Once the user selects a city, the weather data for that city is fetched from the JSON file.
 
 ### Step 3: Expanded Card View
 
-![Expanded Card View](screenshots/Expand search.png)
+![Expanded Card View](screenshot/Expand search.png)
 
 After selecting a city, the weather card expands to show more details. Here, you can see the weather description and the weather forecast for the next 5 days. This information is fetched from the backend API endpoint `localhost:4000/weather?city={cityName}`.
-
-## Getting Started
-
-To run the application locally, follow the instructions provided in the previous section.
-
-...
-
 
 ## Getting Started
 
@@ -63,6 +56,19 @@ docker-compose up -d
 
 
 Additional Information:
-The mock weather data is fetched from the endpoint http://localhost:4000/weatherdata.json.
+The mock weather data is fetched from the endpoint http://localhost:3000/weatherdata.json.
 The Weather data with specific city is fetched by this endpoint http://localhost:4000/weather?city=London
+
+## Automated Testing with Coverage
+
+The Weather Dashboard app includes comprehensive automated testing to ensure reliability and maintainability. We have implemented unit tests and integration tests for both the frontend and backend components of the application. Additionally, we utilize code coverage tools to measure the effectiveness of our test suite.
+
+### Frontend Testing
+
+The frontend tests are written using the Jest testing framework along with React Testing Library for rendering components and simulating user interactions. These tests cover various scenarios, including component rendering, user interactions, and state management.
+
+To run frontend tests and generate coverage reports, use the following command:
+
+```bash
+npm test -- --coverage
 
