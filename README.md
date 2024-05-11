@@ -55,10 +55,14 @@ cd weather-dashboard
 
 docker-compose up -d
 
+### Check the output:
 
+ http://localhost:3000
+
+```
 ### Additional Information:
 The mock weather data is fetched from the endpoint http://localhost:3000/weatherdata.json.
-The Weather data with specific city is fetched by this endpoint http://localhost:4000/weather?city=London
+The Weather data with specific city is fetched by this endpoint http://localhost:4000/weather?city={cityname}
 
 ## Automated Testing with Coverage
 
@@ -76,6 +80,7 @@ To run frontend tests and generate coverage reports, use the following command:
 
 ```bash
 npm test -- --coverage
+```
 
 Note :⚠️ Please note that the Docker may take some time to build, especially if you're running Docker for the first time or if you have a slow internet connection. Additionally, there is room for further improvement in the application UI and features. If I had more time, I would have enhanced the user interface and could add more features to make the Weather Dashboard app even better.
 
