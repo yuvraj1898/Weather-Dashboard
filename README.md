@@ -32,7 +32,7 @@ When you start typing in the search bar, the application suggests city names bas
 
 ![Expanded Card View](screenshot/Expandsearch.png)
 
-After selecting a city, the weather card expands to show more details. Here, you can see the weather description and the weather forecast for the next 5 days. This information is fetched from the backend API endpoint `localhost:4000/weather?city={cityName}`.
+After selecting a city, click on the weather card it expands to show more details. Here, you can see the weather description and the weather forecast for the next 5 days. This information is fetched from the backend API endpoint `localhost:4000/weather?city={cityName}`.
 
 ## Getting Started
 
@@ -61,6 +61,7 @@ docker-compose up -d
 
 ```
 ### Additional Information:
+When you click on a weather card in the dashboard view, it expands to show more detailed information about the weather for that particular city. This detailed view includes the weather description and a 5-day weather forecast, providing users with comprehensive insights into the weather conditions. This information is fetched from the backend API endpoint `localhost:4000/weather?city={cityName}`.
 The mock weather data is fetched from the endpoint http://localhost:3000/weatherdata.json.
 The Weather data with specific city is fetched by this endpoint http://localhost:4000/weather?city={cityname}
 
