@@ -48,7 +48,7 @@ Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/your-username/weather-dashboard.git
-cd weather-dashboard
+cd weather-dashboard (Open terminal or VScode or powershell)
 
 
 ### Starting Docker Containers:
@@ -70,7 +70,7 @@ The Weather Dashboard app includes comprehensive automated testing to ensure rel
 Test Coverage
 After running the tests, you can view the test coverage reports to assess the effectiveness of our test suite. The coverage reports provide insights into which parts of the codebase are covered by tests and identify areas that may require additional testing.
 
-The coverage reports for both frontend and backend are generated in the coverage directory of their respective directories. Open the HTML coverage report in your web browser to view detailed coverage statistics.
+The coverage reports for frontend are generated in the coverage directory of their respective directories. Open the HTML coverage report in your web browser to view detailed coverage statistics.
 
 ### Frontend Testing
 
