@@ -51,7 +51,7 @@
     background-color: #ffffff; /* White */
   }
   100% {
-    background-color: #ffff99; /* Light yellow */
+    background-color: #ffcc80; /* Light yellow */
   }
 }
 
@@ -65,7 +65,7 @@
     background-color: #ffffff; /* White */
   }
   100% {
-    background-color: #99ccff; /* Light blue */
+    background-color: #b3e5fc; /* Light blue */
   }
 }
 
@@ -86,7 +86,7 @@
     background-color: white; /* Red */
   }
   100% {
-    background-color: #ffab40; /* Orange */
+    background-color: #ff8a65; /* Orange */
   }
 }
 .weather-card.snowAnimation{
@@ -98,7 +98,7 @@
     background-color:white; /* Red */
   }
   100% {
-    background-color: #93E7FB; /* Orange */
+    background-color: #e0e0e0; /* Orange */
   }
   
 }
@@ -116,6 +116,10 @@
   padding: 10px;
   text-align: center;
   transition: all 0.3s ease; /* Add transition for smooth effect */
+  
+  
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
 }
 
 .forecast-item:hover {
@@ -130,7 +134,11 @@
 .temperature {
   margin-top: 5px;
 }
+.weather-icon-forecast{
+  
+  font-size: 25px
 
+}
 
 
   

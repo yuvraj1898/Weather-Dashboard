@@ -13,6 +13,7 @@
     const [weather, setWeather] = useState<WeatherData | null>(null);
     const [error, setError] = useState<string>('');
     const [cityname, setCityName] = useState<string>('');
+    const [cityNotFound, setCityNotFound] = useState<boolean>(false);
 
     useEffect(() => {
       const fetchWeatherData = async () => {
@@ -32,13 +33,16 @@
           if (filteredCities.length > 0) {
             setWeather(data[filteredCities[0]]);
             setError('');
+            setCityNotFound(false);
           } else {
             setWeather(null);
             setError('City not found.');
+            setCityNotFound(true);
           }
         } catch (error) {
           console.error('Error fetching weather data:', error);
           setError('Failed to fetch weather data');
+          setCityNotFound(false);
         }
       };
 
@@ -67,7 +71,7 @@
           <input
             type="text"
             id="citySearch"
-            className="city-search"
+            className={`city-search ${cityNotFound ? 'shake' : ''}`}
             placeholder="Search for a city..."
             value={city}
             onChange={handleCityChange}

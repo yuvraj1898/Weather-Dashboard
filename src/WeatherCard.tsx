@@ -95,6 +95,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
       {Object.keys(forecast).map((day, index) => (
         <div key={index} className="forecast-item">
           <div className="day">{day}</div>
+          <div className="weather-icon-forecast">{renderWeatherIcon(parseInt(forecast[day]))}</div>
           <div className="temperature">{forecast[day]}</div>
         </div>
       ))}
