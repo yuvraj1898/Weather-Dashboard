@@ -1,6 +1,6 @@
 // WeatherCard.tsx
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { WiDaySunny, WiCloud, WiRain } from 'react-icons/wi';
 import './css/WeatherCard.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -35,6 +35,21 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
   const [expanded, setExpanded] = useState(false);
   const [description, setDescription] = useState<string | null>(null);
   const [forecast, setForecast] = useState<any>(null);
+  const getCurrentTime = () => {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0'); // Ensure two digits
+    const minutes = now.getMinutes().toString().padStart(2, '0'); // Ensure two digits
+    return `${hours}:${minutes}`;
+  };
+  const [currentTime, setCurrentTime] = useState<string>(getCurrentTime());
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentTime(getCurrentTime());
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   const handleCardClick = () => {
     setExpanded(!expanded);
@@ -58,13 +73,8 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
       console.error('Error fetching city description:', error);
     }
   };
-  const getCurrentTime = () => {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0'); // Ensure two digits
-    const minutes = now.getMinutes().toString().padStart(2, '0'); // Ensure two digits
-    return `${hours}:${minutes}`;
-  };
-  const currentTime =  getCurrentTime();
+ 
+ 
   const getBackgroundImage = (temperature: number): string => {
     
     if (temperature > 25 && temperature < 35) {
