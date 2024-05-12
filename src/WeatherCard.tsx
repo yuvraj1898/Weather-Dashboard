@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import { WiDaySunny, WiCloud, WiRain } from 'react-icons/wi';
 import './css/WeatherCard.css'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTint, faWind, faClock } from '@fortawesome/free-solid-svg-icons';
 
 interface WeatherCardProps {
   city: string;
@@ -39,6 +41,7 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
     if (!expanded) {
       // Fetch description from API when card is expanded
       fetchDescription(city);
+      getCurrentTime();
     }
   };
 
@@ -55,8 +58,13 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
       console.error('Error fetching city description:', error);
     }
   };
-  
- 
+  const getCurrentTime = () => {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0'); // Ensure two digits
+    const minutes = now.getMinutes().toString().padStart(2, '0'); // Ensure two digits
+    return `${hours}:${minutes}`;
+  };
+  const currentTime =  getCurrentTime();
   const getBackgroundImage = (temperature: number): string => {
     
     if (temperature > 25 && temperature < 35) {
@@ -72,38 +80,44 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
   };
 
   return (
-   
     <div
-    className={`weather-card ${expanded ? 'expanded' : ''} ${getBackgroundImage(parseInt(temperature))}`}
-    onClick={handleCardClick}
-    data-testid="background-image"
-  >
-  
-      <div className="weather-info">
-        <div className="city">{city}</div>
-        <div className="temperature">Temperature: {temperature}</div>
-        <div className="temperature">Humidity: {humidity}</div>
-        <div className="temperature">Wind Speed: {windSpeed}</div>
-        <div className="weather-icon">{renderWeatherIcon(parseInt(temperature))}</div>
-        
-      </div>
-      
-      {expanded && forecast && (
-  <div className="forecast">
-   <div className="description">{description}</div>
-    <div className="forecast-container">
-      {Object.keys(forecast).map((day, index) => (
-        <div key={index} className="forecast-item">
-          <div className="day">{day}</div>
-          <div className="weather-icon-forecast">{renderWeatherIcon(parseInt(forecast[day]))}</div>
-          <div className="temperature">{forecast[day]}</div>
-        </div>
-      ))}
+      className={`weather-card ${expanded ? 'expanded' : ''} ${getBackgroundImage(parseInt(temperature))}`}
+      onClick={handleCardClick}
+      data-testid="background-image"
+    >
+       <div className="current-time">
+      <div className="clock-icon" />
+      {currentTime}
     </div>
+      <div className="city">{city}</div>
+  
+      <div className="current-temperature">{temperature}</div>
+  
+      <div className="weather-info-container">
+  <div className="weather-info">
+    <div className="temperature"><FontAwesomeIcon icon={faTint} className="humidity-icon" /> {humidity}</div>
+    <div className="temperature"><FontAwesomeIcon icon={faWind} className="wind-speed-icon" /> {windSpeed}</div>
   </div>
-)}
+  <div className="weather-icon">{renderWeatherIcon(parseInt(temperature))}</div>
+  
+</div>
+      {expanded && forecast && (
+        <div className="forecast">
+          <div className="description">{description}</div>
+          <div className="forecast-container">
+            {Object.keys(forecast).map((day, index) => (
+              <div key={index} className="forecast-item">
+                <div className="day">{day}</div>
+                <div className="weather-icon-forecast">{renderWeatherIcon(parseInt(forecast[day]))}</div>
+                <div className="temperature">{forecast[day]}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
+  
 };
 
 export default WeatherCard;

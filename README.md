@@ -59,6 +59,14 @@ docker-compose up -d
 
  http://localhost:3000
 
+### List of cities for search:
+
+    NewJersey
+    NewYork
+    London
+    Mumbai
+    LosAngeles
+
 ```
 ### Additional Information:
 When you click on a weather card in the dashboard view, it expands to show more detailed information about the weather for that particular city. This detailed view includes the weather description and a 5-day weather forecast, providing users with comprehensive insights into the weather conditions. This information is fetched from the backend API endpoint `localhost:4000/weather?city={cityName}`.

@@ -1,13 +1,17 @@
 .weather-card {
-    background-color: #ffffff; /* White background */
-    border-radius: 20px; /* Curved border */
+   background-color: #ffffff; /* White background */
+   border-radius: 20px; /* Curved border */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 1); /* Box shadow effect */
     padding: 20px; /* Padding for content */
     margin: 20px; /* Margin around the card */
     width: 400px; /* Set the width of the card */
     cursor: pointer; /* Add cursor pointer */
-  position: relative;
   transition: all 0.3s ease; 
+  position: relative;
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: space-between;
   }
   .weather-card.flipped {
     transform: rotateY(180deg); /* Rotate card when flipped */
@@ -15,9 +19,9 @@
   
   
   .weather-card .city {
-    font-size: 24px; /* Font size for city */
-    font-weight: bold; /* Bold font weight */
-    margin-bottom: 10px; /* Margin at the bottom */
+    font-size: 20px; /* Font size for city */
+    font-weight: lighter; /* Bold font weight */
+     /* Margin at the bottom */
   }
   
   .weather-card .temperature,
@@ -86,7 +90,7 @@
     background-color: white; /* Red */
   }
   100% {
-    background-color: #ff8a65; /* Orange */
+    background-color: #ffab40; /* Orange */
   }
 }
 .weather-card.snowAnimation{
@@ -139,6 +143,60 @@
   font-size: 25px
 
 }
+.city {
+  font-size: 24px;
+  font-weight: bold;
+ 
+  align-self: flex-start; /* Align city name to top left */
+}
+
+.current-temperature {
+  font-size: 30px;
+  text-align: center;
+}
+
+.weather-info-container {
+  display: flex;
+  align-items: flex-end; /* Align items to the bottom */
+}
+
+.weather-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.temperature {
+  
+    margin-top: 5px;
+  
+}
+
+.weather-icon {
+  font-size: 48px;
+  margin-left: auto; /* Move the weather icon to the right */
+}
+.humidity,
+.wind-speed {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.humidity .fa-icon,
+.wind-speed .fa-icon {
+  margin-right: 10px;
+}
+.current-time {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 24px;
+  font-weight: lighter;
+  margin: 10px;
+
+}
+
+
 
 
   
