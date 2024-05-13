@@ -44,21 +44,25 @@ To run the application locally using Docker Compose, follow these steps:
 
 ### Clone the Repository
 
+Start the Docker Desktop make sure docker is running.
+
 Clone the repository to your local machine:
 
 ```bash
 git clone https://github.com/your-username/weather-dashboard.git
+```
+```bash
 cd weather-dashboard (Open terminal or VScode or powershell)
-
+```
 
 ### Starting Docker Containers:
-
-docker-compose up -d
-
+```bash
+docker-compose up -d 
+```
 ### Check the output:
-
+```bash
  http://localhost:3000
-
+```
 ### List of cities for search:
 
     NewJersey
@@ -67,7 +71,6 @@ docker-compose up -d
     Mumbai
     LosAngeles
 
-```
 ### Additional Information:
 When you click on a weather card in the dashboard view, it expands to show more detailed information about the weather for that particular city. This detailed view includes the weather description and a 5-day weather forecast, providing users with comprehensive insights into the weather conditions. This information is fetched from the backend API endpoint `localhost:4000/weather?city={cityName}`.
 The mock weather data is fetched from the endpoint http://localhost:3000/weatherdata.json.
@@ -92,5 +95,13 @@ npm test -- --coverage
 ```
 
 Note :⚠️ Please note that the Docker may take some time to build, especially if you're running Docker for the first time or if you have a slow internet connection. Additionally, there is room for further improvement in the application UI and features. If I had more time, I would have enhanced the user interface and could add more features to make the Weather Dashboard app even better.
+### Potential Improvements(if I would have more time😀)
+ #### UI Improvement 
+ #### More Features
+ #### More Test Strategies
+ #### Ways to reduce docker Build time
+ 
+
+
 
 
