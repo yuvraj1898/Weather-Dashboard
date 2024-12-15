@@ -95,7 +95,7 @@ npm test -- --coverage
 ```
 
 Note :⚠️ Please note that the Docker may take some time to build, especially if you're running Docker for the first time or if you have a slow internet connection. Additionally, there is room for further improvement in the application UI and features. If I had more time, I would have enhanced the user interface and could add more features to make the Weather Dashboard app even better.
-### Potential Improvements(if I would have more time😀)
+### Potential Improvements
  #### UI Improvement 
  #### More Features
  #### More Test Strategies
